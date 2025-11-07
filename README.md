@@ -1,7 +1,3 @@
-Got it! Here’s an updated, polished README that mentions the KeyboardShortcuts package without claiming full functionality, so it’s accurate and clear:
-
-⸻
-
 📝 Clipboard Manager
 
 A lightweight macOS clipboard manager built with SwiftUI and AppKit.
@@ -63,14 +59,4 @@ ClipboardMonitor.swift	Monitors the clipboard and manages history
 	•	Swift 5.5 or later
 	•	KeyboardShortcuts￼ package (for planned shortcut integration)
 
-⸻
 
-📄 License
-
-MIT License. See LICENSE￼ for details.
-
-⸻
-
-If you want, I can also add a “Next Steps / TODO” section to the README showing which features are incomplete, like shortcut support, so it’s clear for anyone checking your repo.
-
-Do you want me to add that?
