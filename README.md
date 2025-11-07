@@ -1,16 +1,18 @@
 # 📝 Clipboard Manager
 
-A lightweight **macOS clipboard manager** built with SwiftUI and AppKit.
+A lightweight **macOS clipboard manager** built with **SwiftUI** and **AppKit**.
 Keep track of your clipboard history and quickly paste recent items—all from a sleek menu bar popover.
+
+> ⚠️ Note: The app currently integrates the [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) package, but global shortcuts are not fully implemented yet. This project is a learning exercise in Swift.
 
 ---
 
 ## ✨ Features
 
-* ✅ **Monitors** the system clipboard and stores up to 50 recent items.
-* ✅ **View and expand** truncated clipboard entries when clicked.
+* ✅ **Monitors** the system clipboard and stores up to **50 recent items**.
+* ✅ **View and expand** truncated clipboard entries.
 * ✅ **Select and copy** any item instantly to the system clipboard.
-* ✅ **Persistent history window** for easier management.
+* ✅ Open a **main window** for easier management of your clipboard history.
 * ✅ Lightweight, native macOS design with **menu bar access**.
 * ⚡ **Keyboard shortcuts** planned (via the `KeyboardShortcuts` package).
 
@@ -18,29 +20,28 @@ Keep track of your clipboard history and quickly paste recent items—all from a
 
 ## 🚀 Installation
 
-The project requires Xcode and Swift environment setup.
-
-1.  **Clone** the repository:
+1.  Clone the repository:
     ```bash
     git clone [https://github.com/yourusername/ClipboardManager.git](https://github.com/yourusername/ClipboardManager.git)
     ```
-2.  **Open** the project in Xcode:
+2.  Open the project in Xcode:
     ```bash
     open ClipboardManager.xcodeproj
     ```
-3.  **Build and run** the app on macOS 11.0+.
+3.  Build and run the app on macOS 11.0+.
 
 ---
 
 ## 📖 Usage
 
-1.  Launch the app. A **clipboard icon** appears in the menu bar.
-2.  Click the icon to open the popover. Inside the popover:
-    * **Scroll** through your recent items.
-    * **Click** a truncated item to expand it to full text.
-    * **Tap** an item to copy it to the system clipboard.
+1.  Launch the app. A clipboard icon appears in the menu bar.
+2.  Click the icon to open the popover:
+    * Scroll through your recent items.
+    * Tap an item to select it (copies to the system clipboard).
+    * Click a truncated item to expand it.
+3.  Click **Open Main Window** to view all clipboard history in a separate, persistent window.
 
-> **Note:** Keyboard shortcuts (`Command-Shift-V`, etc.) are planned but not yet fully functional.
+> Note: Keyboard shortcuts are not yet fully functional, but the app is ready to integrate them.
 
 ---
 
@@ -48,11 +49,11 @@ The project requires Xcode and Swift environment setup.
 
 | File | Purpose |
 | :--- | :--- |
-| `AppDelegate.swift` | Handles the menu bar icon, popover presentation, and paste actions. |
-| `Clipboard_ManagerApp.swift` | Main SwiftUI app entry point and lifecycle setup. |
-| `ClipboardListView.swift` | The primary popover UI showing clipboard items and controls. |
-| `ClipboardMonitor.swift` | Monitors the system clipboard and manages the history array. |
-| `Shortcuts.swift` | (Planned) Defines the global keyboard shortcut names. |
+| `AppDelegate.swift` | Handles the menu bar icon, popover, and system paste actions. |
+| `Clipboard_ManagerApp.swift` | Main SwiftUI app entry point. |
+| `ClipboardListView.swift` | Popover UI showing clipboard items. |
+| `ClipboardMonitor.swift` | Monitors the clipboard and manages history. |
+| `Shortcuts.swift` | Defines global keyboard shortcut names (for `KeyboardShortcuts`). |
 
 ---
 
